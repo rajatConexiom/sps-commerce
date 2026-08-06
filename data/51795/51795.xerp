@@ -1,0 +1,91 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "O2JALLNEPHROSIN",
+      "PurchaseOrderNumber": "51795",
+      "PurchaseOrderDate": "7/22/2026"
+    },
+    "Dates": [
+      {
+        "DateTimeQualifier": "010",
+        "Date": "7/29/2026"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "T.Mechanical",
+        "Address1": "2247 Shady Maple Trail",
+        "City": "Loganville",
+        "State": "GA",
+        "PostalCode": "30052",
+        "Country": "USA"
+      },
+      {
+        "AddressTypeCode": "BT",
+        "AddressName": "Donastar",
+        "Address1": "109 E 17th St",
+        "City": "Cheyenne",
+        "State": "WY",
+        "PostalCode": "82001",
+        "Country": "USA"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "Nephros",
+        "Address1": "380 Lackawanna Place",
+        "City": "South Orange",
+        "State": "NJ",
+        "PostalCode": "07079",
+        "Country": "USA"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "70-9101-3",
+        "OrderQty": "1.0",
+        "OrderQtyUOM": "1",
+        "PurchasePrice": "324.70",
+        "ExtendedItemTotal": "324.70"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "22,000 Gallon Capacity; Reduces Sediment, Chlorine, Taste, Odor, Particulate\r\nClass 1, Cyst, Scale, Inhibits Bacteria Growth; 2 Gallon per Minute Flow Rate -\r\nIncludes a High-Flow Triple Stage Parallel Manifold"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "70-00000-AHF1",
+        "OrderQty": "1.0",
+        "OrderQtyUOM": "1",
+        "PurchasePrice": "92.20",
+        "ExtendedItemTotal": "92.20"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Donastar High Flow Single Stage Manifold"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "70-14150-C61",
+        "OrderQty": "1.0",
+        "OrderQtyUOM": "1",
+        "PurchasePrice": "54.92",
+        "ExtendedItemTotal": "54.92"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Everpure Key - 15,000 Gallon Capacity; Reduces Chlorine, Taste, Odor,\r\nParticulate Class 1, Cyst, Inhibits Bacteria Growth"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "471.82"
+  }
+}

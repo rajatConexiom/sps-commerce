@@ -1,0 +1,61 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "3VCALLEBCBRAKES",
+      "PurchaseOrderNumber": "CA733915A",
+      "PurchaseOrderDate": "8/5/2026"
+    },
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "Address1": "45699 Patten Ave\r\nApt 302",
+        "City": "Chilliwack",
+        "State": "BC",
+        "PostalCode": "V2P 1S3",
+        "Contacts": [
+          {
+            "ContactName": "John Burns",
+            "PrimaryPhone": "(506) 623-9631"
+          }
+        ],
+        "Country": "Canada"
+      }
+    ],
+    "References": [
+      {
+        "Description": "9X0151"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "EBC Brakes S9KF1538",
+        "VendorPartNumber": "EBC_Brakes-S9KF1538",
+        "OrderQty": "1.0",
+        "PurchasePrice": "0.0"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Front Stage 9 Yellowstuff Pad And USR Series Rotor Kit"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "EBC Brakes S9KR1513",
+        "VendorPartNumber": "EBC_Brakes-S9KR1513",
+        "OrderQty": "1.0",
+        "PurchasePrice": "0.0"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Rear Stage 9 Yellowstuff Pad And USR Series Rotor Kit"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "0.0"
+  }
+}

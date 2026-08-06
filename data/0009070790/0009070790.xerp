@@ -1,0 +1,72 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "EA9ALLSRSDISTRI",
+      "PurchaseOrderNumber": "0009070790",
+      "PurchaseOrderDate": "7/6/2026"
+    },
+    "PaymentTerms": [
+      {
+        "TermsDescription": "NET 30 DAYS"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "HLSG - PPG HOUSTON",
+        "Address1": "4818 N SAM HOUSTON PKWY W",
+        "City": "HOUSTON",
+        "State": "TX",
+        "PostalCode": "77086",
+        "Contacts": [
+          {
+            "PrimaryPhone": "(832)-353-1200"
+          }
+        ],
+        "Country": "US"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "WESSOL LLC",
+        "Address1": "6420 REA RD STE A1-104",
+        "City": "CHARLOTTE",
+        "State": "NC",
+        "PostalCode": "28277-3612",
+        "Country": "US"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZAAEL",
+        "VendorPartNumber": "FZAAEL",
+        "OrderQty": "5.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "23.094"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "FLOWZONE 21V/2.5A BATTERY CHRGER\nCOMPATIBLE WITH FZAAEM"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZAAEM",
+        "VendorPartNumber": "FZAAEM",
+        "OrderQty": "10.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "68.76"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "FLOWZONE 18V/5.2AH LITHIUM ION\nBATTERY\r\nCOMPATIBLE WITH STORM 2GAL, TYPHOON, MONSOON"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "803.07"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "O2JALLNEPHROSIN",
+      "PurchaseOrderNumber": "51176",
+      "PurchaseOrderDate": "7/13/2026"
+    },
+    "Dates": [
+      {
+        "DateTimeQualifier": "010",
+        "Date": "7/20/2026"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "TUNDRAFMP - MESA",
+        "Address1": "8955 East Warner Road 101",
+        "City": "Mesa",
+        "State": "AZ",
+        "PostalCode": "85212",
+        "Country": "USA"
+      },
+      {
+        "AddressTypeCode": "BT",
+        "AddressName": "Donastar",
+        "Address1": "109 E 17th St",
+        "City": "Cheyenne",
+        "State": "WY",
+        "PostalCode": "82001",
+        "Country": "USA"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "Nephros",
+        "Address1": "380 Lackawanna Place",
+        "City": "South Orange",
+        "State": "NJ",
+        "PostalCode": "07079",
+        "Country": "USA"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "70-14150-A62",
+        "OrderQty": "48.0",
+        "OrderQtyUOM": "48",
+        "PurchasePrice": "46.40",
+        "ExtendedItemTotal": "2227.20"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Tractor Beverages Approved - 15,000 Gallon Capacity; Reduces Chlorine, Taste, Odor,\r\nParticulate Class 1, Cyst, Inhibits Bacteria Growth; 2.5 Gallon per Minute Flow Rate"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "2227.20"
+  }
+}

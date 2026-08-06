@@ -1,0 +1,58 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "EA9ALLSRSDISTRI",
+      "PurchaseOrderNumber": "0009036497",
+      "PurchaseOrderDate": "6/22/2026"
+    },
+    "PaymentTerms": [
+      {
+        "TermsDescription": "NET 30 DAYS"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "HLSG - PPG ALBUQUERQUE",
+        "Address1": "7501 MERIDIAN PL NW\r\nSTE B-1",
+        "City": "ALBUQUERQUE",
+        "State": "NM",
+        "PostalCode": "87121",
+        "Contacts": [
+          {
+            "PrimaryPhone": "(505)-243-1518"
+          }
+        ],
+        "Country": "US"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "WESSOL LLC",
+        "Address1": "6420 REA RD STE A1-104",
+        "City": "CHARLOTTE",
+        "State": "NC",
+        "PostalCode": "28277-3612",
+        "Country": "US"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZFAVE",
+        "VendorPartNumber": "FZFAVE",
+        "OrderQty": "3.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "244.99"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "FLOWZONE VORTEX FLEX BATTERY MIST\nBLOWER\r\n*FLOOR* MIST BLOWER"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "734.97"
+  }
+}

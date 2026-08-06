@@ -1,0 +1,58 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "EA9ALLSRSDISTRI",
+      "PurchaseOrderNumber": "0009075531",
+      "PurchaseOrderDate": "7/7/2026"
+    },
+    "PaymentTerms": [
+      {
+        "TermsDescription": "NET 30 DAYS"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "HLSG - PPG DALLAS",
+        "Address1": "1221 CHAMPION CIRCLE\r\nSTE 107",
+        "City": "CARROLLTON",
+        "State": "TX",
+        "PostalCode": "75006",
+        "Contacts": [
+          {
+            "PrimaryPhone": "(214)-905-3887"
+          }
+        ],
+        "Country": "US"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "WESSOL LLC",
+        "Address1": "6420 REA RD STE A1-104",
+        "City": "CHARLOTTE",
+        "State": "NC",
+        "PostalCode": "28277-3612",
+        "Country": "US"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZRAOG",
+        "VendorPartNumber": "FZRAOG",
+        "OrderQty": "3.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "5.99"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUMP OUTLET HOSE/NUT ASSEMBLY\nSERIES 3\r\nCOMPATIBLE WITH TYPHOON 3, CYCLONE 3,  ZEPHYR"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "17.0"
+  }
+}

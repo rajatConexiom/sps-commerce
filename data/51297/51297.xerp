@@ -1,0 +1,63 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "O2JALLNEPHROSIN",
+      "PurchaseOrderNumber": "51297",
+      "PurchaseOrderDate": "7/15/2026"
+    },
+    "Dates": [
+      {
+        "DateTimeQualifier": "010",
+        "Date": "7/22/2026"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "Lancer Worldwide",
+        "Address1": "6655 Lancer Boulevard",
+        "City": "San Antonio",
+        "State": "TX",
+        "PostalCode": "78219",
+        "Country": "USA"
+      },
+      {
+        "AddressTypeCode": "BT",
+        "AddressName": "Donastar",
+        "Address1": "109 E 17th St",
+        "City": "Cheyenne",
+        "State": "WY",
+        "PostalCode": "82001",
+        "Country": "USA"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "Nephros",
+        "Address1": "380 Lackawanna Place",
+        "City": "South Orange",
+        "State": "NJ",
+        "PostalCode": "07079",
+        "Country": "USA"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "70-15220-A61",
+        "OrderQty": "6.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "66.21",
+        "ExtendedItemTotal": "397.26"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "22,000 Gallon Capacity; Reduces Chlorine, Taste, Odor, Particulate Class 1, Cyst,\r\nScale, Inhibits Bacteria Growth; 2 Gallon per Minute Flow Rate"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "397.26"
+  }
+}

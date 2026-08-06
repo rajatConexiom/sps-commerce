@@ -1,0 +1,58 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "EA9ALLSRSDISTRI",
+      "PurchaseOrderNumber": "0009124299",
+      "PurchaseOrderDate": "7/24/2026"
+    },
+    "PaymentTerms": [
+      {
+        "TermsDescription": "NET 30 DAYS"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "HLSG - PPG DALLAS",
+        "Address1": "1221 CHAMPION CIRCLE\r\nSTE 107",
+        "City": "CARROLLTON",
+        "State": "TX",
+        "PostalCode": "75006",
+        "Contacts": [
+          {
+            "PrimaryPhone": "(214)-905-3887"
+          }
+        ],
+        "Country": "US"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "WESSOL LLC",
+        "Address1": "6420 REA RD STE A1-104",
+        "City": "CHARLOTTE",
+        "State": "NC",
+        "PostalCode": "28277-3612",
+        "Country": "US"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZRAOF",
+        "VendorPartNumber": "FZRAOF",
+        "OrderQty": "5.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "11.994"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "5' REVERSIBLE PVC HOSE W/BEND\nRELIEF 5FT\r\nUV-RESISTANT; COMPATIBLE WITH TYPHOON 3 AND CYCLONE 3"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "59.0"
+  }
+}

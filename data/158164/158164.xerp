@@ -1,0 +1,93 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "NEKPDFSTELLARSN",
+      "PurchaseOrderNumber": "158164",
+      "PurchaseOrderDate": "7/17/2026"
+    },
+    "PaymentTerms": [
+      {
+        "TermsDescription": "Net 30"
+      }
+    ],
+    "Dates": [
+      {
+        "DateTimeQualifier": "002",
+        "Date": "8/10/2026"
+      },
+      {
+        "DateTimeQualifier": "118",
+        "Date": "8/3/2026"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "The FruitGuys",
+        "Address1": "584 Eccles Ave\r\nDock #9",
+        "City": "South San Francisco",
+        "State": "CA",
+        "PostalCode": "94080",
+        "Country": "US"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "Address1": "2801 Conestoga Drive",
+        "City": "CarsonCity",
+        "State": "NV",
+        "PostalCode": "89706",
+        "Country": "US"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "TPSB-MU1.5-24CT",
+        "VendorPartNumber": "TPSB-MU1.5-24CT",
+        "OrderQty": "128.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "16.80",
+        "ExtendedItemTotal": "2150.40"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Stellar Snacks - Pretzels - Maui\r\nMonk - 24 ct"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "TPSB-SS1.5-24CT",
+        "VendorPartNumber": "TPSB-SS1.5-24CT",
+        "OrderQty": "128.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "16.80",
+        "ExtendedItemTotal": "2150.40"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Stellar Snacks - Pretzels - Simply\r\nStellar - 24 ct"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "TPSB-SW1.5-24CT",
+        "VendorPartNumber": "TPSB-SW1.5-24CT",
+        "OrderQty": "128.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "16.80",
+        "ExtendedItemTotal": "2150.40"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "Stellar Snacks - Pretzels - Sweet\r\n& Sparky - 24 ct"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "6451.20"
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "A4HPDFPURETREAT",
+      "PurchaseOrderNumber": "33488-00",
+      "PurchaseOrderDate": "7/31/2026"
+    },
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "PETSlink Distribution Ltd.",
+        "Address1": "5490 76 AVE SE",
+        "City": "CALGARY",
+        "State": "AB",
+        "PostalCode": "T2C 4S3",
+        "Country": "Canada"
+      },
+      {
+        "AddressTypeCode": "BT",
+        "Address1": "5490 76 Ave Se",
+        "City": "Calgary",
+        "State": "AB",
+        "PostalCode": "T2C 4S3"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBMT49SM24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "5.82",
+        "ConsumerPackageCode": "878968002967",
+        "ExtendedItemTotal": "139.68"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG MINI FD SALMON TRAINERS\r\n1.7oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBMT60PO24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "5.82",
+        "ConsumerPackageCode": "878968002578",
+        "ExtendedItemTotal": "139.68"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG MINI FD CHICKEN TRAINERS\r\n2.1oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBMT85BL24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "5.82",
+        "ConsumerPackageCode": "878968002561",
+        "ExtendedItemTotal": "139.68"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG MINI FD BEEF TRAINERS 3.0oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB60BN24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968003407",
+        "ExtendedItemTotal": "184.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG WILD FD LIVER BISON 2.1oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB60MW24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968003414",
+        "ExtendedItemTotal": "184.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG WILD FD SMELT 2.1oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBJK213BJ24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968001816",
+        "ExtendedItemTotal": "184.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG AIR DRIED BEEF 7.5oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB794PO4",
+        "OrderQty": "4.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "64.24",
+        "ConsumerPackageCode": "878968002547",
+        "ExtendedItemTotal": "256.96"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG FREEZE DRIED CHICKEN BREAST\r\n28.0oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBC23SR24",
+        "OrderQty": "48.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.89",
+        "ConsumerPackageCode": "878968002783",
+        "ExtendedItemTotal": "378.72"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - CAT FREEZE DRIED SHRIMP 0.8oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBC66MW24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.89",
+        "ConsumerPackageCode": "878968002820",
+        "ExtendedItemTotal": "189.36"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - CAT FREEZE DRIED MINNOW 2.3oz"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB120BL24",
+        "OrderQty": "48.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968000031",
+        "ExtendedItemTotal": "368.64"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG BEEF LIVER 4.2OZ MID SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB250BL12",
+        "OrderQty": "48.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "15.35",
+        "ConsumerPackageCode": "878968000048",
+        "ExtendedItemTotal": "736.80"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG BEEF LIVER 8.8OZ VALUE SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB470BL12",
+        "OrderQty": "36.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "27.62",
+        "ConsumerPackageCode": "878968000055",
+        "ExtendedItemTotal": "994.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG BEEF LIVER 16.6OZ SUPER\r\nVALUE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB57BL32",
+        "OrderQty": "32.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "3.85",
+        "ConsumerPackageCode": "878968000024",
+        "ExtendedItemTotal": "123.20"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG BEEF LIVER 2OZ ENTRY SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBC31PO12",
+        "OrderQty": "48.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "4.00",
+        "ConsumerPackageCode": "878968000888",
+        "ExtendedItemTotal": "192.00"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - CAT CHICKEN BREAST 1.09OZ VALUE\r\nSIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB120CH24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968001083",
+        "ExtendedItemTotal": "184.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG CHEDDAR CHEESE 4.2OZ MID\r\nSIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB175PO12",
+        "OrderQty": "72.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "15.35",
+        "ConsumerPackageCode": "878968001045",
+        "ExtendedItemTotal": "1105.20"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG CHICKEN BREAST 6.2OZ VALUE\r\nSIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB330PO12",
+        "OrderQty": "36.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "27.62",
+        "ConsumerPackageCode": "878968001052",
+        "ExtendedItemTotal": "994.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG CHICKEN BREAST 11.6OZ SUPER\r\nVALUE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB85PO24",
+        "OrderQty": "48.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968001038",
+        "ExtendedItemTotal": "368.64"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG CHICKEN BREAST 3OZ MID SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB74DL24",
+        "OrderQty": "48.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968000741",
+        "ExtendedItemTotal": "368.64"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG DUCK 2.6OZ MID SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB70SM24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968001175",
+        "ExtendedItemTotal": "184.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - SALMON DOG 2.47OZ MID SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBC11SR12",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "4.00",
+        "ConsumerPackageCode": "878968002868",
+        "ExtendedItemTotal": "96.00"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - CAT SHRIMP 0.38OZ VALUE SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBC30DL12",
+        "OrderQty": "12.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "4.00",
+        "ConsumerPackageCode": "878968000727",
+        "ExtendedItemTotal": "48.00"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - CAT DUCK 1.05OZ VALUE SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PBC32PODL12",
+        "OrderQty": "12.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "4.00",
+        "ConsumerPackageCode": "878968000796",
+        "ExtendedItemTotal": "48.00"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - CAT CHICKEN BREAST & DUCK\r\n1.12OZ VALUE SIZE"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "VendorPartNumber": "1PB95LA24",
+        "OrderQty": "24.00",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "7.68",
+        "ConsumerPackageCode": "878968001151",
+        "ExtendedItemTotal": "184.32"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "PUREBITES - DOG LAMB 3.35OZ MID SIZE"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "7793.76"
+  }
+}

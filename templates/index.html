@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PO Extraction Validator — SPS Commerce × Conexiom</title>
+<link rel="icon" type="image/jpeg" href="/static/conexiom_logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sps-blue: #00A3E0;
+    --sps-blue-dark: #0083b8;
+    --navy: #1F2A5E;
+    --navy-2: #263573;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --border: #e3e8f0;
+    --text: #1c2533;
+    --muted: #64748b;
+    --match-bg: #e9f9f0;
+    --match-fg: #0e8a50;
+    --diff-bg: #fdeeee;
+    --diff-fg: #c22f2f;
+    --na-fg: #9aa4b2;
+    --shadow: 0 1px 3px rgba(16, 33, 63, .06), 0 4px 14px rgba(16, 33, 63, .05);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+  }
+
+  /* ---------- Header ---------- */
+  .topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .topbar-inner {
+    max-width: 1240px; margin: 0 auto; padding: 16px 24px;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .topbar img.sps { height: 64px; }
+  .divider { width: 1px; height: 44px; background: var(--border); }
+  .brand-title h1 { margin: 0; font-size: 19px; font-weight: 800; color: var(--navy); letter-spacing: -.01em; }
+  .brand-title p { margin: 3px 0 0; font-size: 12.5px; color: var(--muted); }
+  .powered {
+    margin-left: auto; display: flex; align-items: center; gap: 12px;
+  }
+  .powered .powered-label {
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .1em; color: var(--muted); text-align: right; line-height: 1.5;
+  }
+  .powered .powered-label b { display: block; font-size: 13px; color: var(--navy); letter-spacing: .02em; text-transform: none; }
+  .powered img.cnx { height: 48px; border-radius: 10px; box-shadow: 0 2px 8px rgba(31, 42, 94, .25); }
+  .hero {
+    background: linear-gradient(120deg, var(--navy) 0%, var(--navy-2) 55%, #2c4a8f 100%);
+    color: #fff; padding: 26px 0 34px;
+  }
+  .hero-inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  .hero h2 { margin: 0 0 4px; font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+  .hero p { margin: 0; font-size: 13.5px; color: #c3cdea; max-width: 760px; }
+  .hero .accent { color: var(--sps-blue); }
+
+  .container { max-width: 1240px; margin: -18px auto 40px; padding: 0 24px; }
+
+  /* ---------- Toolbar ---------- */
+  .toolbar {
+    display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 14px 18px; margin-bottom: 22px;
+  }
+  .toolbar label { font-size: 13px; font-weight: 600; color: var(--navy); }
+  select {
+    padding: 9px 36px 9px 14px; font-size: 14px; font-family: inherit;
+    border-radius: 8px; border: 1px solid var(--border); background: #fff;
+    cursor: pointer; min-width: 160px; font-weight: 500;
+  }
+  select:focus, button:focus { outline: 2px solid var(--sps-blue); outline-offset: 1px; }
+  button {
+    padding: 9px 18px; font-size: 13.5px; font-weight: 600; font-family: inherit;
+    border-radius: 8px; border: 1px solid var(--border); background: #fff;
+    color: var(--navy); cursor: pointer; transition: all .15s;
+  }
+  button:hover:not(:disabled) { border-color: var(--sps-blue); color: var(--sps-blue-dark); }
+  button.primary {
+    background: var(--sps-blue); color: #fff; border-color: var(--sps-blue);
+    box-shadow: 0 2px 8px rgba(0, 163, 224, .35);
+  }
+  button.primary:hover:not(:disabled) { background: var(--sps-blue-dark); color: #fff; }
+  button:disabled { opacity: .5; cursor: default; }
+  .meta { font-size: 12px; color: var(--muted); }
+
+  /* ---------- Summary stats ---------- */
+  .summary { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 16px 24px; min-width: 160px; position: relative; overflow: hidden;
+  }
+  .stat::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--sps-blue);
+  }
+  .stat.matches::before { background: var(--match-fg); }
+  .stat.diffs::before { background: var(--diff-fg); }
+  .stat .num { font-size: 28px; font-weight: 800; letter-spacing: -.02em; }
+  .stat .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; font-weight: 600; margin-top: 2px; }
+  .stat.matches .num { color: var(--match-fg); }
+  .stat.diffs .num { color: var(--diff-fg); }
+
+  /* ---------- Sections ---------- */
+  .section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: var(--shadow); margin-bottom: 18px; overflow: hidden;
+  }
+  .section h2 {
+    margin: 0; font-size: 13.5px; font-weight: 700; color: var(--navy);
+    padding: 12px 18px; background: #f8fafd; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .badge { font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 999px; }
+  .badge.ok { background: var(--match-bg); color: var(--match-fg); }
+  .badge.bad { background: var(--diff-bg); color: var(--diff-fg); }
+  .badge.neutral { background: #eef2f9; color: var(--muted); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { padding: 10px 18px; text-align: left; vertical-align: top; }
+  th {
+    font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em;
+    color: var(--muted); border-bottom: 1px solid var(--border); font-weight: 700;
+    background: #fbfcfe;
+  }
+  tr + tr td { border-top: 1px solid #f0f3f8; }
+  td.field { width: 20%; font-weight: 600; color: #37424f; }
+  td.value { width: 35%; word-break: break-word; }
+  td.status { width: 10%; text-align: center; }
+  tr.diff { background: var(--diff-bg); }
+  tr.diff td.value { color: var(--diff-fg); font-weight: 600; }
+  .pill {
+    font-size: 10.5px; font-weight: 800; padding: 3px 11px; border-radius: 999px;
+    display: inline-block; letter-spacing: .04em;
+  }
+  .pill.match { background: var(--match-bg); color: var(--match-fg); }
+  .pill.diff { background: #fff; color: var(--diff-fg); border: 1.5px solid var(--diff-fg); }
+  .pill.na { color: var(--na-fg); background: #f1f4f8; }
+  .empty { color: var(--na-fg); font-style: italic; }
+
+  #status-msg {
+    font-size: 14px; color: var(--muted); padding: 48px 0; text-align: center;
+    background: var(--card); border: 1px dashed var(--border); border-radius: 12px;
+  }
+  #status-msg.error { color: var(--diff-fg); border-color: var(--diff-fg); background: var(--diff-bg); }
+
+  /* ---------- Schema tabs ---------- */
+  .schema-tabs { display: flex; gap: 4px; padding: 12px 18px 0; border-bottom: 1px solid var(--border); background: #f8fafd; }
+  .tab {
+    border: 1px solid var(--border); border-bottom: none; background: #eef2f9;
+    border-radius: 8px 8px 0 0; padding: 7px 16px; font-size: 12.5px; color: var(--muted); font-weight: 600;
+    box-shadow: none;
+  }
+  .tab.active { background: var(--card); color: var(--sps-blue-dark); }
+  code.path {
+    font-family: Consolas, "Cascadia Code", monospace; font-size: 12px;
+    background: #eef4fb; color: var(--navy); padding: 2px 7px; border-radius: 5px;
+  }
+  .type { font-size: 11px; color: var(--muted); font-family: Consolas, monospace; }
+  td.note { font-size: 12.5px; color: var(--muted); }
+
+  details.raw { margin-top: 26px; }
+  details.raw summary { cursor: pointer; font-size: 13px; color: var(--muted); font-weight: 600; }
+  details.raw pre {
+    background: var(--navy); color: #d8e1f0; padding: 16px; border-radius: 10px;
+    overflow: auto; max-height: 420px; font-size: 12px;
+  }
+  .raw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .raw-grid h3 { font-size: 13px; margin: 12px 0 6px; color: var(--navy); }
+  @media (max-width: 820px) { .raw-grid { grid-template-columns: 1fr; } .brand-title, .powered .powered-label { display: none; } }
+
+  .spinner {
+    display: inline-block; width: 16px; height: 16px; border: 2px solid #cbd5e1;
+    border-top-color: var(--sps-blue); border-radius: 50%; animation: spin .7s linear infinite;
+    vertical-align: -3px; margin-right: 8px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  footer { text-align: center; padding: 10px 0 30px; font-size: 12px; color: var(--na-fg); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <img class="sps" src="/static/sps_logo.png" alt="SPS Commerce">
+    <div class="divider"></div>
+    <div class="brand-title">
+      <h1>PO Extraction Validator</h1>
+      <p>SPS Commerce .xerp &nbsp;vs&nbsp; Conexiom Document Extraction API</p>
+    </div>
+    <div class="powered">
+      <div class="powered-label">Powered by<b>Conexiom</b></div>
+      <img class="cnx" src="/static/conexiom_logo.jpg" alt="Conexiom">
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h2>Purchase Order <span class="accent">Extraction Accuracy</span> Report</h2>
+    <p>Field-by-field comparison of the expected SPS Commerce order data (.xerp) against the structured
+       data extracted from the source PDF by the Conexiom Document Extraction API — including a full schema analysis.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="toolbar">
+    <label for="order-select">Purchase Order</label>
+    <select id="order-select">
+      {% for order in orders %}
+      <option value="{{ order.id }}">{{ order.id }}</option>
+      {% endfor %}
+    </select>
+    <button class="primary" id="compare-btn">Compare</button>
+    <button id="refresh-btn" title="Ignore cache and re-run the extraction API">Re-extract (bypass cache)</button>
+    <span class="meta" id="cache-note"></span>
+  </div>
+
+  <div id="status-msg">Select a purchase order and click <b>Compare</b> to run the analysis.</div>
+
+  <div id="results" style="display:none">
+    <div class="summary">
+      <div class="stat"><div class="num" id="stat-total">0</div><div class="label">Fields compared</div></div>
+      <div class="stat matches"><div class="num" id="stat-matches">0</div><div class="label">Matches</div></div>
+      <div class="stat diffs"><div class="num" id="stat-diffs">0</div><div class="label">Differences</div></div>
+      <div class="stat"><div class="num" id="stat-accuracy">–</div><div class="label">Accuracy</div></div>
+    </div>
+    <div class="meta" id="file-meta" style="margin-bottom:16px"></div>
+    <div id="sections"></div>
+
+    <div class="section" id="schema-section">
+      <h2>Schema comparison <span class="badge neutral" id="schema-badge"></span></h2>
+      <div class="schema-tabs">
+        <button class="tab active" data-tab="mapped">Mapped fields</button>
+        <button class="tab" data-tab="xerp-only">Only in .xerp</button>
+        <button class="tab" data-tab="api-only">Only in API result</button>
+      </div>
+      <div id="schema-mapped" class="tab-panel"></div>
+      <div id="schema-xerp-only" class="tab-panel" style="display:none"></div>
+      <div id="schema-api-only" class="tab-panel" style="display:none"></div>
+    </div>
+
+    <details class="raw">
+      <summary>Show raw JSON (.xerp &amp; extraction response)</summary>
+      <div class="raw-grid">
+        <div><h3>.xerp file</h3><pre id="raw-xerp"></pre></div>
+        <div><h3>Extraction API response</h3><pre id="raw-api"></pre></div>
+      </div>
+    </details>
+  </div>
+</div>
+
+<footer>SPS Commerce &nbsp;·&nbsp; Powered by Conexiom Document Extraction</footer>
+
+<script>
+const select = document.getElementById("order-select");
+const compareBtn = document.getElementById("compare-btn");
+const refreshBtn = document.getElementById("refresh-btn");
+const statusMsg = document.getElementById("status-msg");
+const results = document.getElementById("results");
+
+function esc(v) {
+  if (v === null || v === undefined || v === "") return '<span class="empty">—</span>';
+  const d = document.createElement("div");
+  d.textContent = String(v);
+  return d.innerHTML;
+}
+
+async function runCompare(force) {
+  const id = select.value;
+  if (!id) return;
+  compareBtn.disabled = refreshBtn.disabled = true;
+  results.style.display = "none";
+  statusMsg.className = "";
+  statusMsg.style.display = "block";
+  statusMsg.innerHTML = '<span class="spinner"></span>' +
+    (force ? "Calling extraction API (this may take a minute)…" : "Loading comparison…");
+  try {
+    const url = "/api/compare/" + encodeURIComponent(id) + (force ? "/refresh" : "");
+    const resp = await fetch(url, { method: force ? "POST" : "GET" });
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(data.error || resp.statusText);
+    render(data);
+  } catch (err) {
+    statusMsg.className = "error";
+    statusMsg.textContent = "Error: " + err.message;
+  } finally {
+    compareBtn.disabled = refreshBtn.disabled = false;
+  }
+}
+
+function render(data) {
+  statusMsg.style.display = "none";
+  results.style.display = "block";
+  const s = data.comparison.summary;
+  document.getElementById("stat-total").textContent = s.total;
+  document.getElementById("stat-matches").textContent = s.matches;
+  document.getElementById("stat-diffs").textContent = s.diffs;
+  const compared = s.matches + s.diffs;
+  document.getElementById("stat-accuracy").textContent =
+    compared ? Math.round((s.matches / compared) * 1000) / 10 + "%" : "–";
+  document.getElementById("file-meta").textContent =
+    `xerp: ${data.xerp_file}` +
+    (data.pdf ? `   |   PDF: ${data.pdf}` : "") +
+    (data.from_cache ? "   |   extraction result loaded from cache" : "   |   fresh extraction API call");
+
+  const container = document.getElementById("sections");
+  container.innerHTML = "";
+  for (const section of data.comparison.sections) {
+    const diffs = section.rows.filter(r => r.status === "diff").length;
+    const badge = diffs === 0
+      ? '<span class="badge ok">all match</span>'
+      : `<span class="badge bad">${diffs} difference${diffs > 1 ? "s" : ""}</span>`;
+    let rowsHtml = "";
+    for (const r of section.rows) {
+      const pill = r.status === "match" ? '<span class="pill match">MATCH</span>'
+                 : r.status === "diff" ? '<span class="pill diff">DIFF</span>'
+                 : '<span class="pill na">N/A</span>';
+      rowsHtml += `<tr class="${r.status === "diff" ? "diff" : ""}">
+        <td class="field">${esc(r.field)}</td>
+        <td class="value">${esc(r.xerp)}</td>
+        <td class="value">${esc(r.api)}</td>
+        <td class="status">${pill}</td>
+      </tr>`;
+    }
+    const div = document.createElement("div");
+    div.className = "section";
+    div.innerHTML = `<h2>${section.title} ${badge}</h2>
+      <table>
+        <thead><tr><th>Field</th><th>.xerp (expected)</th><th>Extraction API</th><th>Status</th></tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table>`;
+    container.appendChild(div);
+  }
+
+  document.getElementById("raw-xerp").textContent = JSON.stringify(data.raw.xerp, null, 2);
+  document.getElementById("raw-api").textContent = JSON.stringify(data.raw.extraction, null, 2);
+  renderSchema(data.schema);
+}
+
+function pathCell(path, type) {
+  if (!path) return '<span class="empty">— none —</span>';
+  return `<code class="path">${esc(path)}</code>` + (type ? ` <span class="type">${esc(type)}</span>` : "");
+}
+
+function renderSchema(schema) {
+  if (!schema) return;
+  document.getElementById("schema-badge").textContent =
+    `${schema.mapped.length} mapped · ${schema.xerp_only.length} xerp-only · ${schema.api_only.length} API-only`;
+
+  let mappedRows = "";
+  for (const m of schema.mapped) {
+    const typeDiff = m.xerp_type && m.api_type && m.xerp_type !== m.api_type;
+    mappedRows += `<tr class="${!m.api_path ? "diff" : ""}">
+      <td class="value">${pathCell(m.xerp_path, m.xerp_type)}</td>
+      <td class="value">${pathCell(m.api_path, m.api_type)}</td>
+      <td class="note">${typeDiff ? "<b>type differs</b>. " : ""}${m.note ? esc(m.note) : ""}</td>
+    </tr>`;
+  }
+  document.getElementById("schema-mapped").innerHTML = `<table>
+    <thead><tr><th>.xerp field (type)</th><th>Extraction API field (type)</th><th>Notes</th></tr></thead>
+    <tbody>${mappedRows}</tbody></table>`;
+
+  const onlyTable = (list) => `<table>
+    <thead><tr><th>Field path</th><th>Type</th></tr></thead>
+    <tbody>${list.map(f => `<tr><td class="value"><code class="path">${esc(f.path)}</code></td><td class="type">${esc(f.type)}</td></tr>`).join("")
+      || '<tr><td colspan="2" class="empty">None</td></tr>'}</tbody></table>`;
+  document.getElementById("schema-xerp-only").innerHTML = onlyTable(schema.xerp_only);
+  document.getElementById("schema-api-only").innerHTML = onlyTable(schema.api_only);
+}
+
+document.querySelectorAll(".schema-tabs .tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".schema-tabs .tab").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    document.querySelectorAll(".tab-panel").forEach(p => p.style.display = "none");
+    document.getElementById("schema-" + btn.dataset.tab).style.display = "block";
+  });
+});
+
+compareBtn.addEventListener("click", () => runCompare(false));
+refreshBtn.addEventListener("click", () => runCompare(true));
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "EA9ALLSRSDISTRI",
+      "PurchaseOrderNumber": "0009047888",
+      "PurchaseOrderDate": "6/25/2026"
+    },
+    "PaymentTerms": [
+      {
+        "TermsDescription": "NET 30 DAYS"
+      }
+    ],
+    "Address": [
+      {
+        "AddressTypeCode": "ST",
+        "AddressName": "HLSG - PPG DALLAS",
+        "Address1": "1221 CHAMPION CIRCLE\r\nSTE 107",
+        "City": "CARROLLTON",
+        "State": "TX",
+        "PostalCode": "75006",
+        "Contacts": [
+          {
+            "PrimaryPhone": "(214)-905-3887"
+          }
+        ],
+        "Country": "US"
+      },
+      {
+        "AddressTypeCode": "VN",
+        "AddressName": "WESSOL LLC",
+        "Address1": "6420 REA RD STE A1-104",
+        "City": "CHARLOTTE",
+        "State": "NC",
+        "PostalCode": "28277-3612",
+        "Country": "US"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZAAK3",
+        "VendorPartNumber": "FZVAAK-3",
+        "OrderQty": "10.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "230.99"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "TYPHOON 3 BATTERY BACKPACK SPRAYER\n4GA\r\n*FLOOR* FLOWZONE 4 GALLON BATTERY BACKPACK SPRAYER"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZFAVEB2",
+        "VendorPartNumber": "FZFAVE-B2",
+        "OrderQty": "2.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "293.99"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "FLOWZONE VORTEX FLEX BATTERY MIST\nBLOWER\r\n*FLOOR* MIST BLOWER + 2 BATTERIES"
+        }
+      ]
+    },
+    {
+      "OrderLine": {
+        "BuyerPartNumber": "WOLFZPATU",
+        "VendorPartNumber": "FZPATU",
+        "OrderQty": "4.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "699.99"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "INJECTOSOL BATTERY AEROSOL INJECTOR\n*FLOOR*"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "5697.84"
+  }
+}

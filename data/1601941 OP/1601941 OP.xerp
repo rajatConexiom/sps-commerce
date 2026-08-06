@@ -1,0 +1,75 @@
+{
+  "Header": {
+    "OrderHeader": {
+      "TradingPartnerId": "HI7PDFAGFMANUFA",
+      "PurchaseOrderNumber": "1601941 OP",
+      "PurchaseOrderDate": "8/5/2026",
+      "Vendor": "2801"
+    },
+    "Contacts": [
+      {
+        "ContactName": "TDONLEY"
+      }
+    ],
+    "Address": [
+      {
+        "AddressLocationNumber": "3501012",
+        "AddressTypeCode": "ST",
+        "AddressName": "Viking SupplyNet",
+        "Address1": "2678 SW 36th St",
+        "City": "Fort Lauderdale",
+        "State": "FL",
+        "PostalCode": "33312",
+        "Country": "US"
+      },
+      {
+        "AddressTypeCode": "BT",
+        "AddressName": "Supply Network, Inc.",
+        "Address1": "5150 Beltway Dr. SE",
+        "City": "Caledonia",
+        "State": "MI",
+        "PostalCode": "49316-0000",
+        "Country": "US"
+      }
+    ],
+    "FOBRelatedInstruction": [
+      {
+        "FOBLocationDescription": "Viking Pays Freight"
+      }
+    ],
+    "References": [
+      {
+        "Description": "3501012"
+      }
+    ],
+    "Notes": [
+      {
+        "Note": "Delivery Instructions:\nViking standard terms and conditions apply.\r\nSHIP VIA GROUND USING OUR UPS ACCOUNT # 5X4536\r\nAck PO to Buyer via email, InventoryControl@vikingcorp.com"
+      }
+    ]
+  },
+  "LineItem": [
+    {
+      "OrderLine": {
+        "LineSequenceNumber": "1.000",
+        "BuyerPartNumber": "7760P-10",
+        "OrderQty": "1.0",
+        "OrderQtyUOM": "EA",
+        "PurchasePrice": "295.8500"
+      },
+      "ProductOrItemDescription": [
+        {
+          "ProductDescription": "6\" SCH10 PIPE COR MONTR PWDCT"
+        }
+      ],
+      "Dates": [
+        {
+          "Date": "5/8/2026"
+        }
+      ]
+    }
+  ],
+  "Summary": {
+    "TotalAmount": "295.85"
+  }
+}
