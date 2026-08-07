@@ -3,6 +3,7 @@
 import json
 import os
 import re
+import tempfile
 from datetime import datetime
 
 import requests
@@ -16,7 +17,10 @@ app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 _DEFAULT_DOCS = r"C:\Users\rkadian\Downloads\SPS commerce"
 DOCS_DIR = os.getenv("SPS_DOCS_DIR") or (_DEFAULT_DOCS if os.path.isdir(_DEFAULT_DOCS) else os.path.join(BASE_DIR, "data"))
-CACHE_DIR = os.path.join(BASE_DIR, "cache")
+
+# The app bundle directory (e.g. Vercel's /var/task) is read-only at runtime,
+# so the cache must live in a writable temp directory instead.
+CACHE_DIR = os.getenv("CACHE_DIR") or os.path.join(tempfile.gettempdir(), "conexiom_cache")
 
 CONEXIOM_TOKEN = os.getenv("CONEXIOM_TOKEN")
 CONEXIOM_PROJECT_UUID = os.getenv("CONEXIOM_PROJECT_UUID")
@@ -67,8 +71,7 @@ def get_order(order_id):
 # ---------------------------------------------------------------------------
 
 def extract_document(pdf_path, order_id, force=False):
-    """Call the Conexiom extraction API, caching results per order."""
-    os.makedirs(CACHE_DIR, exist_ok=True)
+    """Call the Conexiom extraction API, caching results per order (best-effort)."""
     cache_file = os.path.join(CACHE_DIR, f"{order_id}.json")
     if not force and os.path.isfile(cache_file):
         with open(cache_file, encoding="utf-8-sig") as fh:
@@ -90,8 +93,12 @@ def extract_document(pdf_path, order_id, force=False):
     if not response.ok:
         raise RuntimeError(f"API error {response.status_code}: {response.text[:500]}")
     result = response.json()
-    with open(cache_file, "w", encoding="utf-8") as fh:
-        json.dump(result, fh, indent=2)
+    try:
+        os.makedirs(CACHE_DIR, exist_ok=True)
+        with open(cache_file, "w", encoding="utf-8") as fh:
+            json.dump(result, fh, indent=2)
+    except OSError:
+        pass  # read-only filesystem (e.g. serverless) — skip caching, not fatal
     return result, False
 
 
